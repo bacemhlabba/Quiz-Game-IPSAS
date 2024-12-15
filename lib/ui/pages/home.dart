@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
-import 'package:opentrivia/generated/l10n.dart'; // Import the generated localization file
+import 'package:opentrivia/generated/l10n.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:opentrivia/models/category.dart';
+import 'package:opentrivia/ui/pages/LeaderboardPage.dart';
 import 'package:opentrivia/ui/widgets/quiz_options.dart';
 
 class HomePage extends StatelessWidget {
@@ -30,34 +31,38 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(S.of(context).app_title), // Localized app title
-        elevation: 0,
+        title: Text(S.of(context).app_title),
+        elevation: 4.0,
+        backgroundColor: Theme.of(context).brightness == Brightness.dark
+            ? Colors.black.withOpacity(0.8)
+            : Colors.blueAccent,
         actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.leaderboard),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LeaderboardPage()),
+              );
+            },
+          ),
           Switch(
             value: Theme.of(context).brightness == Brightness.dark,
             onChanged: (value) {
-              onThemeChanged(value); // Pass the theme change back to MyApp
+              onThemeChanged(value);
             },
           ),
-          // Adding a language change button in AppBar
           PopupMenuButton<Locale>(
             onSelected: (Locale locale) {
-              onLanguageChanged(locale); // Pass language change to MyApp
+              onLanguageChanged(locale);
             },
             itemBuilder: (context) => [
               PopupMenuItem(
-                value: Locale('en', ''),
-                child:
-                    Text(S.of(context).english), // Localized text for English
-              ),
+                  value: Locale('en', ''), child: Text(S.of(context).english)),
               PopupMenuItem(
-                value: Locale('fr', ''),
-                child: Text(S.of(context).french), // Localized text for French
-              ),
+                  value: Locale('fr', ''), child: Text(S.of(context).french)),
               PopupMenuItem(
-                value: Locale('ar', ''),
-                child: Text(S.of(context).arabic), // Localized text for Arabic
-              ),
+                  value: Locale('ar', ''), child: Text(S.of(context).arabic)),
             ],
           ),
         ],
@@ -67,7 +72,13 @@ class HomePage extends StatelessWidget {
           ClipPath(
             clipper: WaveClipperTwo(),
             child: Container(
-              decoration: BoxDecoration(color: Theme.of(context).primaryColor),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Colors.blue, Colors.green],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                ),
+              ),
               height: 200,
             ),
           ),
@@ -79,30 +90,32 @@ class HomePage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(
                       horizontal: 16.0, vertical: 8.0),
                   child: Text(
-                    S.of(context).select_category, // Localized text
+                    S.of(context).select_category,
                     style: TextStyle(
                         color: Colors.white,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 16.0),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18.0),
                   ),
                 ),
               ),
               SliverPadding(
                 padding: const EdgeInsets.all(16.0),
                 sliver: SliverGrid(
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: MediaQuery.of(context).size.width > 1000
-                            ? 7
-                            : MediaQuery.of(context).size.width > 600
-                                ? 5
-                                : 3,
-                        childAspectRatio: 1.2,
-                        crossAxisSpacing: 10.0,
-                        mainAxisSpacing: 10.0),
-                    delegate: SliverChildBuilderDelegate(
-                      _buildCategoryItem,
-                      childCount: categories.length,
-                    )),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: MediaQuery.of(context).size.width > 1000
+                        ? 7
+                        : MediaQuery.of(context).size.width > 600
+                            ? 5
+                            : 3,
+                    childAspectRatio: 1.2,
+                    crossAxisSpacing: 10.0,
+                    mainAxisSpacing: 10.0,
+                  ),
+                  delegate: SliverChildBuilderDelegate(
+                    _buildCategoryItem,
+                    childCount: categories.length,
+                  ),
+                ),
               ),
             ],
           ),
@@ -114,25 +127,26 @@ class HomePage extends StatelessWidget {
   Widget _buildCategoryItem(BuildContext context, int index) {
     Category category = categories[index];
     return MaterialButton(
-      elevation: 1.0,
-      highlightElevation: 1.0,
+      elevation: 8.0,
+      highlightElevation: 10.0,
       onPressed: () => _categoryPressed(context, category),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0),
+        borderRadius: BorderRadius.circular(15.0),
       ),
       color: Colors.grey.shade800,
       textColor: Colors.white70,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          if (category.icon != null) Icon(category.icon),
-          if (category.icon != null) SizedBox(height: 5.0),
+          if (category.icon != null) Icon(category.icon, size: 40),
+          if (category.icon != null) SizedBox(height: 10.0),
           AutoSizeText(
             category.name,
-            minFontSize: 10.0,
+            minFontSize: 12.0,
             textAlign: TextAlign.center,
             maxLines: 3,
             wrapWords: false,
+            style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w500),
           ),
         ],
       ),
@@ -143,9 +157,7 @@ class HomePage extends StatelessWidget {
     showModalBottomSheet(
       context: context,
       builder: (sheetContext) => BottomSheet(
-        builder: (_) => QuizOptionsDialog(
-          category: category,
-        ),
+        builder: (_) => QuizOptionsDialog(category: category),
         onClosing: () {},
       ),
     );

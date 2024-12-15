@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:opentrivia/models/category.dart';
 import 'package:opentrivia/models/question.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:opentrivia/models/score.dart';
 import 'package:opentrivia/ui/pages/quiz_finished.dart';
 import 'package:html_unescape/html_unescape.dart';
+import 'package:opentrivia/ui/widgets/ScoreStorage.dart';
 
 class QuizPage extends StatefulWidget {
   final List<Question> questions;
@@ -23,6 +25,7 @@ class _QuizPageState extends State<QuizPage> {
   int _currentIndex = 0;
   final Map<int, dynamic> _answers = {};
   final GlobalKey<ScaffoldState> _key = GlobalKey<ScaffoldState>();
+  final ScoreStorage storage = ScoreStorage();
 
   @override
   Widget build(BuildContext context) {
@@ -128,7 +131,7 @@ class _QuizPageState extends State<QuizPage> {
     );
   }
 
-  void _nextSubmit() {
+  void _nextSubmit() async {
     if (_answers[_currentIndex] == null) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Text("You must select an answer to continue."),
@@ -140,6 +143,23 @@ class _QuizPageState extends State<QuizPage> {
         _currentIndex++;
       });
     } else {
+      // Calculer le score final
+      int score = 0;
+      widget.questions.asMap().forEach((index, question) {
+        if (question.correctAnswer == _answers[index]) {
+          score++;
+        }
+      });
+
+      // Sauvegarder le score
+      final savedScore = Score(
+        category: widget.category?.name ?? 'Unknown',
+        difficulty: 'Medium', // Ajuste cela en fonction de ton application
+        score: score,
+      );
+      await storage.saveScore(savedScore);
+
+      // Naviguer vers la page de fin
       Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (_) => QuizFinishedPage(
               questions: widget.questions, answers: _answers)));
