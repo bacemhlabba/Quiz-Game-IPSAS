@@ -1,0 +1,237 @@
+{
+   "checksum": "5919cbc232b133eb9a428d4632daf948",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13378759954772731",
+            "date_last_used": "0",
+            "guid": "c7bd91dd-f153-4d14-9a10-fe69fc587742",
+            "id": "31",
+            "name": "Express VPN",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=expressvpn&c=*&locale=en_us&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13378759954772603",
+            "date_last_used": "0",
+            "guid": "712643f7-2ced-4984-aaf6-17985cfbb390",
+            "id": "30",
+            "name": "Amazon.co.uk – Online Shopping",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=amazon&c=*&locale=en_uk&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13378759954772333",
+            "date_last_used": "0",
+            "guid": "d92dd8e4-dcbf-45e8-aa94-cfbad5acdf02",
+            "id": "29",
+            "name": "LastPass password manager",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=lastpass&c=*&locale=*&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13378753349470715",
+            "date_last_used": "0",
+            "guid": "4f7547ce-e2e0-4da5-8b28-ff4ce1dd7d2c",
+            "id": "26",
+            "name": "Express VPN",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=expressvpn&c=*&locale=en_us&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13378753349470418",
+            "date_last_used": "0",
+            "guid": "1ee36b25-ed2e-4d2a-97bd-08559b567ee6",
+            "id": "25",
+            "name": "Amazon.co.uk – Online Shopping",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=amazon&c=*&locale=en_uk&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13378753349469879",
+            "date_last_used": "0",
+            "guid": "0130bb8a-ca85-4315-bcfd-e5c2e69da286",
+            "id": "24",
+            "name": "LastPass password manager",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=lastpass&c=*&locale=*&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13378742792410180",
+            "date_last_used": "0",
+            "guid": "689dfc03-1396-4f64-8462-5f37de989b6e",
+            "id": "21",
+            "name": "Express VPN",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=expressvpn&c=*&locale=en_us&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13378742792409866",
+            "date_last_used": "0",
+            "guid": "9232fc34-0026-45c1-ac2b-c46300060d7f",
+            "id": "20",
+            "name": "Amazon.co.uk – Online Shopping",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=amazon&c=*&locale=en_uk&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13378742792409410",
+            "date_last_used": "0",
+            "guid": "72f560be-fc77-4614-b629-cf481ff586a3",
+            "id": "19",
+            "name": "LastPass password manager",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=lastpass&c=*&locale=*&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13378684133649021",
+            "date_last_used": "0",
+            "guid": "a5cfc323-2b2f-4466-9a06-25fa47214ce8",
+            "id": "16",
+            "name": "Express VPN",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=expressvpn&c=*&locale=en_us&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13378684133648848",
+            "date_last_used": "0",
+            "guid": "762fdcba-f2fe-40ca-8e13-b0721cc0adb9",
+            "id": "15",
+            "name": "Amazon.co.uk – Online Shopping",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=amazon&c=*&locale=en_uk&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13378684133648577",
+            "date_last_used": "0",
+            "guid": "9012b5f3-0387-4374-bddc-b30b5941bfd3",
+            "id": "14",
+            "name": "LastPass password manager",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=lastpass&c=*&locale=*&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13378670199772556",
+            "date_last_used": "0",
+            "guid": "ee908972-4db0-4b3a-9776-1e1d7e12a9c3",
+            "id": "8",
+            "name": "Express VPN",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=expressvpn&c=*&locale=en_us&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13378670199772062",
+            "date_last_used": "0",
+            "guid": "f869633b-7667-4fb2-ba13-d8228d751a33",
+            "id": "7",
+            "name": "Amazon.co.uk – Online Shopping",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=amazon&c=*&locale=en_uk&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13378670199771425",
+            "date_last_used": "0",
+            "guid": "ac759ae2-32cb-4329-a049-438e6fa32bb7",
+            "id": "6",
+            "name": "LastPass password manager",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "http://js.redirect.hp.com/jumpstation?bd=lastpass&c=*&locale=*&pf=*&s=*&tp=edge",
+            "visit_count": 0
+         }, {
+            "date_added": "13280405308332071",
+            "date_last_used": "0",
+            "guid": "0ea2baf7-a4ed-4ecb-9941-59437d8d64f6",
+            "id": "9",
+            "name": "Amazon.co.uk – Online Shopping",
+            "show_icon": false,
+            "source": "import_fre",
+            "type": "url",
+            "url": "http://www.amazon.co.uk/gp/bit/amazonbookmark.html?tag=hp2-brobookmark-uk-21&partner=HP",
+            "visit_count": 0
+         } ],
+         "date_added": "13378670199447773",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Barre des favoris",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13280405308332071",
+               "date_last_used": "0",
+               "guid": "0b0c0139-c7a3-4c5d-bab4-eb9f8f2907b3",
+               "id": "11",
+               "name": "Amazon.co.uk – Online Shopping",
+               "show_icon": false,
+               "source": "import_fre",
+               "type": "url",
+               "url": "http://www.amazon.co.uk/gp/bit/amazonbookmark.html?tag=hp2-brobookmark-uk-21&partner=HP",
+               "visit_count": 0
+            } ],
+            "date_added": "13378670204115918",
+            "date_last_used": "0",
+            "date_modified": "0",
+            "guid": "f7f7fe8f-98a8-466c-af7b-1bc4ee0e92c0",
+            "id": "10",
+            "name": "HP",
+            "source": "import_fre",
+            "type": "folder"
+         } ],
+         "date_added": "13378670199447781",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Autres favoris",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13378670199447787",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Favoris de l’appareil mobile",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CjEKDgiIgQISCEQYgcuTAQAAEgAqGGFNUTFieDBtcGhFYkhnM1hTd0ZscWc9PUgDoAYMEqwBCAkSpwEKHDZONHVkZTViOGRuY0J1ZEtUN05ESmZudURGaz0SJDBlYTJiYWY3LWE0ZWQtNGVjYi05OTQxLTU5NDM3ZDhkNjRmNhgAIAEoATCYgrOxvDI4qcOysbwyQKnDsrG8MkocK1dLZlJTZURNVU9mUXlZWUpZQ2NiREQvZnE4PVoeIhxWdjZ6RWNKUllmWGx3VEk0N1JNVXc0MmIrQW89ZQAAAADCPgJgAhKOAQgCEokBChxZY1NUb252RVNQd3FDczRMMmNyVmh2NjhMOTg9EiRmOWQ3YzE1Yy01MjZlLTU2NzUtODhjYi1mMGUwNGFmYmUzNzkYACAAKAAwzfbW5pUyOPz+1uaVMkD8/tbmlTJKHG9QVmtod0JSYlY2NUtDV1IyK0lPTkhXb091OD1aAGUAAAAAwj4CYAASrAEICxKnAQocclczYVBqWWtIWGxFb21GSXpLWTlmTk1yeFc0PRIkMGIwYzAxMzktYzdhMy00YzVkLWJhYjQtZWI5ZjhmMjkwN2IzGAAgASgBMJeCs7G8Mjipw7KxvDJAqcOysbwyShwyV3JNQnY3cXpQQlhVdDhYZmpEZlYxVmQxQUU9Wh4iHFZUa2tISmhRYm40b2VwbDNjWFVLWGsrZ1RORT1lAAAAAMI+AmACEqwBCAoSpwEKHEhnbXV1ZWhPNjgyVXJHUlBSQ3o2NDVHRm5sOD0SJGY3ZjdmZThmLTk4YTgtNDY2Yy1hZjdiLTFiYzRlZTBlOTJjMBgAIAEoATCWgrOxvDI4qcOysbwyQKnDsrG8MkocdUJ6R3FndlE4V05HaHl6ZjhyUzlDencxSGNjPVoeIhxmYW0yQnkzOUZ5aGRhc1I5QjhLYjRLY2pIeTQ9ZQAAAADCPgJgAhKOAQgBEokBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9EiRkNGRkNmIwYy0zNGIwLTVlOGQtYjBkYy1jYjFkZWIyM2E1N2UYACAAKAAwzPbW5pUyOOT+1uaVMkDk/tbmlTJKHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAwj4CYAASjgEIAxKJAQocbmpnRHU4OGVDcnZYcDg2cEQ3ZkhHY3FGcDg4PRIkMjRkMDYxYzktNmNlMS01NzU5LWJkNGYtNGQxZGI1YjJiZjNmGAAgACgAMNL21uaVMjjH/9bmlTJAx//W5pUyShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAAMI+AmAAMAA4AA==",
+   "version": 1
+}

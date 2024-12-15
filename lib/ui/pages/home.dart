@@ -4,15 +4,22 @@ import 'package:opentrivia/generated/l10n.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:opentrivia/models/category.dart';
 import 'package:opentrivia/ui/pages/LeaderboardPage.dart';
+import 'package:opentrivia/ui/pages/SettingsPage.dart';
+import 'package:opentrivia/ui/widgets/notification_service.dart'; // Importer le service de notifications
 import 'package:opentrivia/ui/widgets/quiz_options.dart';
 
 class HomePage extends StatelessWidget {
   final Function(bool) onThemeChanged;
   final Function(Locale) onLanguageChanged;
+  final NotificationService
+      notificationService; // Ajouter le service de notifications
 
-  HomePage(
-      {Key? key, required this.onThemeChanged, required this.onLanguageChanged})
-      : super(key: key);
+  HomePage({
+    Key? key,
+    required this.onThemeChanged,
+    required this.onLanguageChanged,
+    required this.notificationService, // Initialiser le service de notifications
+  }) : super(key: key);
 
   final List<Color> tileColors = [
     Colors.green,
@@ -64,6 +71,27 @@ class HomePage extends StatelessWidget {
               PopupMenuItem(
                   value: Locale('ar', ''), child: Text(S.of(context).arabic)),
             ],
+          ),
+          IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SettingsPage(
+                    onSoundChanged: (value) {
+                      // Gérer l'activation/désactivation du son ici
+                    },
+                    onNotificationChanged: (value) {
+                      // Gérer l'activation/désactivation des notifications
+                    },
+                    isSoundEnabled: true, // Par défaut, le son est activé
+                    isNotificationEnabled:
+                        true, // Par défaut, les notifications sont activées
+                  ),
+                ),
+              );
+            },
           ),
         ],
       ),
@@ -120,6 +148,16 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Exemple d'envoi de notification lorsque l'utilisateur clique sur le bouton
+          notificationService.showNotification(
+            title: 'Welcome to IPSAS Quiz!',
+            body: 'Get ready to test your knowledge!',
+          );
+        },
+        child: Icon(Icons.notifications),
       ),
     );
   }

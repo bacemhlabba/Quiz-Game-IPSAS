@@ -6,6 +6,7 @@ import 'package:opentrivia/models/score.dart';
 import 'package:opentrivia/ui/pages/quiz_finished.dart';
 import 'package:html_unescape/html_unescape.dart';
 import 'package:opentrivia/ui/widgets/ScoreStorage.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class QuizPage extends StatefulWidget {
   final List<Question> questions;
@@ -26,6 +27,45 @@ class _QuizPageState extends State<QuizPage> {
   final Map<int, dynamic> _answers = {};
   final GlobalKey<ScaffoldState> _key = GlobalKey<ScaffoldState>();
   final ScoreStorage storage = ScoreStorage();
+
+  late AudioPlayer _audioPlayer; // Player pour la musique
+  bool _isAudioLoading = false; // Indicateur de chargement audio
+
+  @override
+  void initState() {
+    super.initState();
+    _audioPlayer = AudioPlayer();
+    _playBackgroundMusic(); // Jouer la musique dès que la page est chargée
+  }
+
+  // Jouer la musique de fond
+  void _playBackgroundMusic() async {
+    setState(() {
+      _isAudioLoading = true;
+    });
+
+    try {
+      // Définir la source audio
+      final source = AssetSource('assets/sounds/calm_sound.mp3');
+
+      // Définir la source et jouer la musique
+      await _audioPlayer.setSource(source);
+      _audioPlayer.setReleaseMode(ReleaseMode.loop); // Loop the music
+      await _audioPlayer.play(source); // Fournir la source comme argument
+    } catch (e) {
+      print("Erreur de lecture audio: $e");
+    } finally {
+      setState(() {
+        _isAudioLoading = false;
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _audioPlayer.stop(); // Arrêter la musique quand la page est fermée
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +161,9 @@ class _QuizPageState extends State<QuizPage> {
                         onPressed: _nextSubmit,
                       ),
                     ),
-                  )
+                  ),
+                  if (_isAudioLoading) // Indicateur de chargement audio
+                    Center(child: CircularProgressIndicator()),
                 ],
               ),
             )
