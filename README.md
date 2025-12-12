@@ -50,7 +50,7 @@ Answer multiple-choice questions within your selected category and difficulty le
 View your quiz results including total questions, score percentage, and the number of correct and incorrect answers.
 
 ### Answer Review
-<img src="screenshots/quiz6.png" width="300" alt="Check Answers Screen">
+<img src="screenshots/quiz6.png" width="300" alt="Answer Review Screen">
 
 Review all questions with the correct answers highlighted to learn from your mistakes.
 
