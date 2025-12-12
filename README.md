@@ -6,6 +6,7 @@ Welcome to the Quiz Game repository! This project is designed to provide an enga
 
 - [Introduction](#introduction)
 - [Features](#features)
+- [Screenshots](#screenshots)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -23,6 +24,37 @@ Quiz Game is a fun and interactive quiz application where users can test their k
 - Score tracking
 - User-friendly interface
 - Customizable questions and answers
+
+## Screenshots
+
+<div align="center">
+
+### Category Selection
+<img src="screenshots/quiz1.png" width="300" alt="Category Selection Screen">
+
+Select from various quiz categories including General Knowledge, Books, Film, Music, Musicals & Theatres, and Television.
+
+### Quiz Configuration
+<img src="screenshots/quiz2.png" width="300" alt="Quiz Configuration Screen">
+
+Choose the number of questions (10, 20, 30, 40, or 50) and select your preferred difficulty level (Any, Easy, Medium, or Hard).
+
+### Quiz Question
+<img src="screenshots/quiz3.png" width="300" alt="Quiz Question Screen">
+
+Answer multiple-choice questions within your selected category and difficulty level.
+
+### Results
+<img src="screenshots/quiz5.png" width="300" alt="Results Screen">
+
+View your quiz results including total questions, score percentage, and the number of correct and incorrect answers.
+
+### Answer Review
+<img src="screenshots/quiz6.png" width="300" alt="Answer Review Screen">
+
+Review all questions with the correct answers highlighted to learn from your mistakes.
+
+</div>
 
 ## Installation
 
